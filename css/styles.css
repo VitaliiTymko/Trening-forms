@@ -820,17 +820,225 @@ img {
 
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--white-color);  
+  background-color: var(--white-color);
   cursor: pointer;
   fill: var(--span-logo-color);
-  transition:fill var(--anim);
+  transition: fill var(--anim);
 }
 
 /*--------Начало ДЗ6-----------*/
 
-
 .modal-close-btn:focus .icon-close,
 .modal-close-btn:hover .icon-close {
- fill: var(--secondary-txt-color);
+  fill: var(--secondary-txt-color);
 }
 
+.modal-form {
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-text {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--main-txt-color);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--third-txt-color);
+}
+
+.form-input-icon {
+  display: flex;
+  position: relative;
+}
+
+.form-field input {
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  cursor: pointer;
+  transition: var(--anim);
+}
+
+.form-field input:focus {
+  border: 1px solid var(--secondary-txt-color);
+}
+
+.form-field input:focus-within>.form-icon {
+  fill: var(--secondary-txt-color);
+}
+
+
+
+/* .modal-form__label:focus-within>.modal-form__form-icon,
+.modal-form__label:hover>.modal-form__form-icon {
+    fill: #2196F3;
+} */
+
+.form-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+  width: 18px;
+  height: 18px;
+  transition: fill var(--anim);
+}
+
+/* .form-field input:focus  .form-icon {
+  fill: var(--secondary-txt-color);  
+} */
+
+.form-comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 448px;
+  height: 138px;
+}
+
+.form-comment label {
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 4px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.form-comment textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  margin: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition: var(--anim);
+  cursor: pointer;
+}
+
+.form-comment textarea:focus {
+  border: 1px solid var(--secondary-txt-color);
+}
+
+/* .checkbox {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  margin-bottom: 30px;
+} */
+
+/*---checkbox--*/
+
+.check-agry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.72;
+  margin-bottom: 30px;
+
+  color: var(--third-txt-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+
+
+.check-icon {  
+  display: flex;  
+  align-items: center;
+  justify-content: center;  
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  /* outline: 1px solid #000000;
+    outline-offset: -1px; */
+  border: 2px solid var(--main-txt-color);
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-agry { 
+    fill: var(--white-color);
+}
+
+.check-input:checked + .check-icon {
+  background-color: var(--secondary-txt-color);  
+  background-size: contain;
+  background-origin: border-box;
+  border: 2px;  
+  border-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.check-agry-link {
+  color: #2196f3;
+  margin-left: 5px;
+}
+
+.btn-agry {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: var(--secondary-txt-color);
+  color: var(--white-color);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  border: none;
+  border-radius: 4px;
+  transition: background-color var(--anim);
+  cursor: pointer;
+}
+
+.btn-agry:hover,
+.btn-agry:focus {
+  background-color: var(--bg-color-hero-btn);
+}
