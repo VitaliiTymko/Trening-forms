@@ -889,11 +889,6 @@ img {
   border: 1px solid var(--secondary-txt-color);
 }
 
-.form-field input:focus-within>.form-icon {
-  fill: var(--secondary-txt-color);
-}
-
-
 
 /* .modal-form__label:focus-within>.modal-form__form-icon,
 .modal-form__label:hover>.modal-form__form-icon {
@@ -902,16 +897,22 @@ img {
 
 .form-icon {
   position: absolute;
-  left: 12px;
-  bottom: 11px;
+  top: 11px;
+  left: 12px;  
   width: 18px;
   height: 18px;
+  fill: #e81891;
   transition: fill var(--anim);
+  
 }
 
 /* .form-field input:focus  .form-icon {
   fill: var(--secondary-txt-color);  
 } */
+
+.form-input:focus+.form-icon {
+  fill:#2196f3;
+}
 
 .form-comment {
   display: flex;
@@ -928,6 +929,15 @@ img {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
+}
+
+.comment-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .form-comment textarea {
@@ -982,33 +992,29 @@ img {
   margin: -1px;
 }
 
-
-
-.check-icon {  
-  display: flex;  
+.check-icon {
+  display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   width: 16px;
   height: 15px;
   margin-right: 7px;
-  /* outline: 1px solid #000000;
-    outline-offset: -1px; */
   border: 2px solid var(--main-txt-color);
   border-radius: 2px;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
   transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-agry { 
-    fill: var(--white-color);
+.form-agry {
+  fill: var(--white-color);
 }
 
 .check-input:checked + .check-icon {
-  background-color: var(--secondary-txt-color);  
+  background-color: var(--secondary-txt-color);
   background-size: contain;
   background-origin: border-box;
-  border: 2px;  
+  border: 2px;
   border-color: transparent;
   background-repeat: no-repeat;
   cursor: pointer;
