@@ -901,7 +901,7 @@ img {
   left: 12px;  
   width: 18px;
   height: 18px;
-  fill: #e81891;
+  fill:var(--main-txt-color);
   transition: fill var(--anim);
   
 }
@@ -1048,3 +1048,4 @@ img {
 .btn-agry:focus {
   background-color: var(--bg-color-hero-btn);
 }
+
